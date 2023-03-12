@@ -19,11 +19,11 @@ const Canvas = () => {
         }),
     }));
 
-    const addToBoard = (item) => {
-        setModule((state) => (!state.includes(item) ? [...state, item] : state));
+    const addToBoard = (item: any) => {
+        setModule((state: any) => (!state.includes(item) ? [...state, item] : state));
     };
 
-    const removeModule = (item) => {
+    const removeModule = (item: any) => {
         setModule(module.filter((el) => el !== item));
         dispatch(deleteModule(item.type.name));
     };
