@@ -5,7 +5,7 @@ The application is built with React, Typescript, and Redux. SASS is used as the 
 ### Clone the repository to your computer
 
 ```html
-git clone https://github.com/your-username/calculator.git
+git clone https://github.com/leshamaybe/calculator-constructor.git
 ```
 
 ### Installation
