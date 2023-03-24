@@ -45,8 +45,6 @@ export const modulesSlice = createSlice({
 
 export const { isDrag, addNumber, calculate, addOperation } = modulesSlice.actions;
 
-export const selectCount = (state: RootState) => state.modules.dragging;
-
 export const currentNum = (state: RootState) => state.modules.number;
 
 export const historyNum = (state: RootState) => state.modules.history;
