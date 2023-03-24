@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../../store/store';
-import { IModulesProps } from '../../types';
+import { RootState } from './store';
+import { IModulesProps } from '../types';
 
 const initialState: IModulesProps = {
     dragging: false,

@@ -1,0 +1,32 @@
+.equals {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 12px;
+    border-radius: 5px;
+    cursor: move;
+    justify-content: center;
+    width: 240px;
+    height: 72px;
+
+    &.shadow {
+        box-shadow: none;
+        opacity: 0.5;
+    }
+
+    .btn {
+        display: inherit;
+        align-items: center;
+        justify-content: center;
+        width: 232px;
+        height: 64px;
+        background-color: #5d5fef;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .disabled_pointer {
+        pointer-events: none;
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { addModule } from '../components/canvas/canvasSlice';
+import { addModule } from '../store/canvasSlice';
 import { useDrag } from 'react-dnd';
 import { useAppDispatch, useAppSelector } from '../hooks/reduxHooks';
 

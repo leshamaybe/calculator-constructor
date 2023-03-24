@@ -1,0 +1,33 @@
+.toggler {
+    display: flex;
+    flex-direction: row;
+    width: 243px;
+    margin-right: -300px;
+    margin-bottom: 30px;
+    color: #4d5562;
+    background-color: #f3f4f6;
+    border-radius: 6px;
+
+    .btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-grow: 1;
+        background-color: #f3f4f6;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: 1px solid #f3f4f6;
+        cursor: pointer;
+
+        svg {
+            margin-right: 8px;
+        }
+    }
+
+    .active_btn:focus,
+    .active_btn {
+        border: 1px solid #e2e3e5;
+        background-color: #ffffff;
+    }
+}

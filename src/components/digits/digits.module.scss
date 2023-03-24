@@ -1,0 +1,36 @@
+.digits {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 12px;
+    border-radius: 5px;
+    cursor: move;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 240px;
+
+    &.shadow {
+        box-shadow: none;
+        opacity: 0.5;
+    }
+
+    .btn {
+        display: inherit;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e2e3e5;
+        width: 72px;
+        height: 48px;
+        border-radius: 6px;
+        margin: 4px 4px 4px 4px;
+        background: inherit;
+    }
+
+    .zero {
+        width: 152px;
+    }
+
+    .disabled_pointer {
+        pointer-events: none;
+    }
+}

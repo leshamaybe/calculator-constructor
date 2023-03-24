@@ -1,27 +1,30 @@
 import React from 'react';
 import EyeSVG from '../../assets/EyeSVG';
 import BracketsSVG from '../../assets/bracketsSVG';
-import { switching, selectButton } from '../canvas/canvasSlice';
+import Button from './ToggleButton';
+import { switching, selectButton } from '../../store/canvasSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import styles from './toggler.module.scss';
+import cn from 'classnames';
 
 const Toggler = () => {
     const currentButton = useSelector(selectButton);
     const dispatch = useDispatch();
 
     return (
-        <div className="toggler">
-            <button
-                className={currentButton == 'runtime' ? 'active-btn' : undefined}
+        <div className={styles.toggler}>
+            <Button
+                className={cn(styles.btn, { [styles.active_btn]: currentButton == 'runtime' })}
                 onClick={() => dispatch(switching('runtime'))}>
                 <EyeSVG color={currentButton == 'runtime' ? '#5D5FEF' : '#4D5562'} />
                 Runtime
-            </button>
-            <button
-                className={currentButton == 'constructor' ? 'active-btn' : undefined}
+            </Button>
+            <Button
+                className={cn(styles.btn, { [styles.active_btn]: currentButton == 'constructor' })}
                 onClick={() => dispatch(switching('constructor'))}>
                 <BracketsSVG color={currentButton == 'constructor' ? '#5D5FEF' : '#4D5562'} />
                 Constructor
-            </button>
+            </Button>
         </div>
     );
 };

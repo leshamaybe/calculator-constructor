@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ICanvasProps } from '../../types';
-import { RootState } from '../../store/store';
+import { ICanvasProps } from '../types';
+import { RootState } from './store';
 
 const initialState: ICanvasProps = {
     toggle: 'constructor',

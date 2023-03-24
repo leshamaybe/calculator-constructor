@@ -1,6 +1,6 @@
 import React from 'react';
 import Canvas from './components/canvas/Canvas';
-import Board from './components/modules/Board';
+import Board from './components/board/Board';
 import Toggler from './components/toggleSwitch/Toggler';
 
 function App() {

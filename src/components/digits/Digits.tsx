@@ -1,7 +1,9 @@
 import React from 'react';
-import { addNumber } from './modulesSlice';
+import { addNumber } from '../../store/modulesSlice';
 import useModuleDnD from '../../hooks/useModuleDnD';
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
+import styles from './digits.module.scss';
+import cn from 'classnames';
 
 const nums = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', ','];
 
@@ -9,23 +11,22 @@ const Digits = () => {
     const modulesOnCanvas = useAppSelector((state) => state.canvas.moduleIn);
     const dispatch = useAppDispatch();
 
-    const { isDragging, canDrag, drag, currentButton } = useModuleDnD(<Digits />);
+    const { isDragging, drag, currentButton } = useModuleDnD(<Digits />);
 
     return (
         <div
-            draggable={!canDrag ? false : true}
-            className="digits"
-            ref={!modulesOnCanvas.includes('Digits') ? drag : undefined}
-            style={{
-                boxShadow: modulesOnCanvas.includes('Digits') ? 'none' : undefined,
-                opacity: isDragging || !canDrag || modulesOnCanvas.includes('Digits') ? 0.5 : 1,
-            }}>
+            className={cn(styles.digits, {
+                [styles.shadow]: isDragging || modulesOnCanvas.includes('Digits'),
+            })}
+            ref={!modulesOnCanvas.includes('Digits') ? drag : undefined}>
             {nums.map((item: any, i) => (
                 <button
-                    style={{ pointerEvents: currentButton == 'runtime' ? 'auto' : 'none' }}
                     onClick={() => dispatch(addNumber(item))}
                     key={i}
-                    className={item == '0' ? 'digits-zero' : undefined}>
+                    className={cn(styles.btn, {
+                        [styles.zero]: item == '0',
+                        [styles.disabled_pointer]: currentButton != 'runtime',
+                    })}>
                     {item}
                 </button>
             ))}

@@ -1,0 +1,32 @@
+.math_symbols {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 12px;
+    border-radius: 5px;
+    cursor: move;
+    justify-content: space-between;
+    width: 240px;
+    height: 56px;
+    padding: 0 4px 0 4px;
+
+    &.shadow {
+        box-shadow: none;
+        opacity: 0.5;
+    }
+
+    .btn {
+        display: inherit;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e2e3e5;
+        width: 52px;
+        height: 48px;
+        border-radius: 6px;
+        background: inherit;
+    }
+
+    .disabled_pointer {
+        pointer-events: none;
+    }
+}

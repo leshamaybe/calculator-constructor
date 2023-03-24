@@ -1,0 +1,28 @@
+.display {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 12px;
+    border-radius: 5px;
+    cursor: move;
+    justify-content: center;
+    width: 240px;
+    height: 60px;
+
+    &.shadow {
+        box-shadow: none;
+        opacity: 0.5;
+    }
+
+    .total {
+        width: 232px;
+        height: 52px;
+        background-color: #f3f4f6;
+        border-radius: 6px;
+        text-align: right;
+        padding: 4px 8px 4px 0;
+        color: #111827;
+        font-weight: 800;
+        font-size: 36px;
+    }
+}

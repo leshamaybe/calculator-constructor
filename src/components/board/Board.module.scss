@@ -1,0 +1,13 @@
+.board {
+    width: 243px;
+    height: 448px;
+    margin-right: 56px;
+
+    button {
+        pointer-events: none;
+    }
+
+    &.visible {
+        visibility: hidden;
+    }
+}
